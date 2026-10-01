@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Untuk Fatihatul Islaminyah</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff3f1;--ink:#4a2c48;--rose:#f27c9b;--lilac:#b9a1ee;--mint:#bfe8d3;--card:#ffffff;--soft:#ffe3ea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1b2d;--ink:#ffe9f0;--card:#3d2842;--soft:#4d3254}}
+:root[data-theme="dark"]{--bg:#2a1b2d;--ink:#ffe9f0;--card:#3d2842;--soft:#4d3254}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Nunito,system-ui,sans-serif;overflow-x:hidden}
+h1,h2{font-family:Caveat,cursive;margin:0;line-height:1.05}
+h2{font-size:clamp(34px,7vw,48px);text-align:center;margin-bottom:6px}
+section{max-width:860px;margin:0 auto;padding:56px 20px}
+.sub{text-align:center;opacity:.75;margin:0 auto 26px;max-width:440px}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.petal{position:absolute;top:-30px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+main{position:relative;z-index:1}
+.hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.hero small{font-size:18px;opacity:.8}
+.hero h1{font-size:clamp(48px,13vw,104px);color:var(--rose);margin:8px 0 14px;text-wrap:balance}
+.hero h1 span{border-right:3px solid var(--rose);padding-right:4px;animation:blink .8s steps(1) infinite}
+@keyframes blink{50%{border-color:transparent}}
+.btn{font:800 16px Nunito,sans-serif;border:0;border-radius:99px;padding:12px 24px;background:var(--rose);color:#fff;cursor:pointer;box-shadow:0 5px 0 #c9587a;transition:transform .12s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #c9587a}
+.btn:focus-visible,.card:focus-visible,.pol:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
+/* polaroid */
+.wall{display:flex;flex-wrap:wrap;justify-content:center;gap:22px 16px}
+.pol{background:#fff;color:#4a2c48;padding:10px 10px 14px;width:min(46%,210px);box-shadow:0 8px 20px rgba(74,44,72,.18);transform:rotate(var(--r));transition:transform .25s;cursor:pointer;border:0;font:inherit}
+.pol:hover,.pol:focus-visible{transform:rotate(0) scale(1.07);z-index:2}
+.pol .ph{aspect-ratio:1;display:grid;place-items:center;font-size:52px;background:linear-gradient(135deg,var(--c1),var(--c2));background-size:cover;background-position:center}
+.pol b{display:block;font:700 22px Caveat,cursive;margin-top:8px}
+#lb{position:fixed;inset:0;background:rgba(40,20,40,.8);display:none;place-items:center;z-index:50;padding:20px}
+#lb.on{display:grid}
+#lb .pol{width:min(86vw,360px);transform:rotate(-2deg);cursor:default}
+#lb .ph{font-size:96px}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.card{perspective:700px;height:130px;background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit}
+.card i{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;display:grid;place-items:center;padding:14px;text-align:center;transition:transform .5s;font-style:normal}
+.card{position:relative}
+.card .f{background:var(--rose);color:#fff;font:700 28px Caveat,cursive}
+.card .b{background:var(--card);box-shadow:0 6px 16px rgba(74,44,72,.15);transform:rotateY(180deg);font-weight:600;font-size:15px}
+.card.on .f{transform:rotateY(180deg)}.card.on .b{transform:rotateY(0)}
+/* games */
+.box{background:var(--card);border-radius:24px;padding:18px;box-shadow:0 8px 24px rgba(74,44,72,.12)}
+.bar{display:flex;justify-content:space-between;font-weight:800;margin-bottom:10px}
+#cv{width:100%;max-width:420px;display:block;margin:0 auto;border-radius:16px;background:var(--soft);touch-action:none}
+.mem{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:380px;margin:0 auto}
+.mc{aspect-ratio:1;border:0;border-radius:14px;background:var(--lilac);font-size:32px;cursor:pointer;color:transparent;transition:transform .2s}
+.mc.up{background:var(--soft);color:inherit;transform:rotateY(0)}
+.mc.ok{background:var(--mint);color:inherit}
+.msg{text-align:center;font-weight:800;min-height:28px;margin-top:10px;color:var(--rose)}
+/* letter */
+.env{max-width:480px;margin:0 auto;text-align:center}
+.letter{display:none;background:#fffaf2;color:#4a2c48;border-radius:6px;padding:26px 22px;margin-top:18px;box-shadow:0 10px 26px rgba(74,44,72,.2);text-align:left;font:600 25px/1.35 Caveat,cursive;white-space:pre-wrap}
+.letter.on{display:block}
+footer{text-align:center;padding:30px 20px 50px;opacity:.7;position:relative;z-index:1}
+#tg{position:fixed;right:12px;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;background:var(--card);color:var(--ink);border:0;border-radius:99px;width:40px;height:40px;font-size:18px;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.15)}
+@media (prefers-reduced-motion:reduce){.petal{display:none}.hero h1 span{animation:none}}
+</style>
+</head>
+<body>
+<button id="tg" aria-label="Ganti tema terang/gelap">🌙</button>
+<div id="petals" aria-hidden="true"></div>
+<main>
+<section class="hero">
+  <small id="hello"></small>
+  <h1><span id="typed"></span></h1>
+  <p class="sub" id="tag"></p>
+  <button class="btn" onclick="document.getElementById('foto').scrollIntoView()">Mulai lihat 🌸</button>
+</section>
+
+<section id="foto">
+  <h2>Galeri kenangan</h2>
+  <p class="sub">Klik fotonya untuk memperbesar.</p>
+  <div class="wall" id="wall"></div>
+</section>
+
+<section>
+  <h2>Kartu untukmu</h2>
+  <p class="sub">Ketuk kartu untuk membukanya.</p>
+  <div class="grid" id="cards"></div>
+</section>
+
+<section>
+  <h2>Game kecil</h2>
+  <p class="sub">Santai saja, tidak ada yang kalah di sini.</p>
+  <div class="box" style="margin-bottom:22px">
+    <div class="bar"><span>🧺 Tangkap bunga</span><span>Skor: <b id="sc">0</b></span></div>
+    <canvas id="cv" width="420" height="320" aria-label="Game tangkap bunga, geser untuk menggerakkan keranjang"></canvas>
+    <div class="msg" id="gm">Geser jarimu atau mouse untuk menggerakkan keranjang.</div>
+    <div style="text-align:center;margin-top:8px"><button class="btn" id="go">Main</button></div>
+  </div>
+  <div class="box">
+    <div class="bar"><span>🃏 Cari pasangan</span><span>Langkah: <b id="mv">0</b></span></div>
+    <div class="mem" id="mem"></div>
+    <div class="msg" id="mm"></div>
+    <div style="text-align:center;margin-top:8px"><button class="btn" id="rs">Acak ulang</button></div>
+  </div>
+</section>
+
+<section>
+  <h2>Sepucuk surat</h2>
+  <div class="env">
+    <p class="sub">Ada pesan kecil untukmu.</p>
+    <button class="btn" id="open">Buka surat 💌</button>
+    <div class="letter" id="letter"></div>
+  </div>
+</section>
+</main>
+<footer id="foot"></footer>
+<div id="lb" role="dialog" aria-modal="true"><div class="pol" id="lbc"></div></div>
+
+<script>
+/* ====== EDIT BAGIAN INI SAJA ====== */
+const CONFIG = {
+  nama: "Fatihatul Islaminyah",
+  sapaan: "Halo, ini untuk kamu",
+  tagline: "Website kecil yang dibuat supaya harimu sedikit lebih ceria.",
+  pengirim: "[Someone]",
+  /* Foto: isi "src" dengan nama file (misal "foto1.jpg") kalau file ada di folder yang sama. Kosongkan untuk placeholder. */
+  foto: [
+    {src:"img/1.jpeg", cap:"Hari yang seru", emo:"🌷"},
+    {src:"img/3.jpeg", cap:"Senyum favorit", emo:"😊"},
+    {src:"img/4.jpeg", cap:"Jalan-jalan", emo:"🌤️"},
+    {src:"img/5.jpeg", cap:"Momen lucu", emo:"🤭"},
+    {src:"img/2.jpeg", cap:"Indah kan", emo:"🍰"},
+    {src:"img/6.jpeg", cap:"Selalu ceria", emo:"✨"}
+  ],
+  kartu: [
+    "Gatau mau ngetik apa hehe.",
+    "Cantik banget dari kayangan mana?.",
+    "Senyum dulu atuh.",
+    "Lanjut aja.",
+    "Gimana suka gak?.",
+    " Ehhh makasih jangan sungkan kayak ke siapa aja😝."
+  ],
+  surat: "Untuk Fatihatul Islaminyah,\n\n Kasian bentar lagi balik pondok🤣.\n\nTetap semangat ya.\n\n Gausah nangisin aku kok😝,\n[Someone]"
+};
+/* =================================== */
+const $=id=>document.getElementById(id);
+const T=(s)=>{const d=document.createElement('div');d.textContent=s;return d.innerHTML};
+$('hello').textContent=CONFIG.sapaan;$('tag').textContent=CONFIG.tagline;
+$('foot').textContent="Dibuat dengan 💕 oleh "+CONFIG.pengirim;
+$('letter').textContent=CONFIG.surat;
+
+// theme
+let dark=matchMedia('(prefers-color-scheme:dark)').matches;
+const applyTheme=()=>{document.documentElement.dataset.theme=dark?'dark':'light';$('tg').textContent=dark?'☀️':'🌙'};
+applyTheme();$('tg').onclick=()=>{dark=!dark;applyTheme()};
+
+// typing
+(function(){const t=CONFIG.nama+" 🌸";let i=0;const el=$('typed');
+const n=()=>{el.textContent=t.slice(0,++i);if(i<t.length)setTimeout(n,90)};n()})();
+
+// petals
+const em=['🌸','🌷','💮','🌼','💗'];
+setInterval(()=>{if(document.hidden||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+const p=document.createElement('span');p.className='petal';p.textContent=em[Math.random()*em.length|0];
+p.style.left=Math.random()*100+'vw';p.style.fontSize=(14+Math.random()*14)+'px';
+p.style.animationDuration=(7+Math.random()*7)+'s';$('petals').appendChild(p);setTimeout(()=>p.remove(),15000)},900);
+
+// gallery
+const pal=[['#ffd1dc','#ffb3c7'],['#d8c8ff','#b9a1ee'],['#c9f0dd','#a2dcc0'],['#ffe3b8','#ffc97f'],['#ffd1dc','#d8c8ff'],['#c9f0dd','#ffe3b8']];
+CONFIG.foto.forEach((f,i)=>{
+  const b=document.createElement('button');b.className='pol';b.style.setProperty('--r',((i%2?1:-1)*(2+i%3*1.5))+'deg');
+  b.setAttribute('aria-label','Perbesar foto: '+f.cap);b.innerHTML=ph(f,i)+'<b>'+T(f.cap)+'</b>';
+  b.onclick=()=>{$('lbc').innerHTML=ph(f,i)+'<b>'+T(f.cap)+'</b>';$('lb').classList.add('on')};
+  $('wall').appendChild(b)});
+function ph(f,i){const c=pal[i%pal.length];const bg=f.src?`background-image:url('${encodeURI(f.src)}');`:'';
+ return `<div class="ph" style="${bg}--c1:${c[0]};--c2:${c[1]}">${f.src?'':f.emo}</div>`}
+$('lb').onclick=()=>$('lb').classList.remove('on');
+addEventListener('keydown',e=>{if(e.key==='Escape')$('lb').classList.remove('on')});
+
+// cards
+CONFIG.kartu.forEach(k=>{const c=document.createElement('button');c.className='card';
+ c.innerHTML='<i class="f">Buka 💗</i><i class="b">'+T(k)+'</i>';c.onclick=()=>c.classList.toggle('on');$('cards').appendChild(c)});
+
+// letter
+$('open').onclick=()=>{$('letter').classList.toggle('on')};
+
+// catch game
+(function(){const cv=$('cv'),x=cv.getContext('2d');let run=false,px=210,its=[],sc=0,t=0,raf;
+const W=cv.width,H=cv.height;
+function pos(e){const r=cv.getBoundingClientRect();const cx=(e.touches?e.touches[0].clientX:e.clientX);px=Math.max(36,Math.min(W-36,(cx-r.left)*W/r.width))}
+cv.addEventListener('mousemove',pos);cv.addEventListener('touchmove',e=>{pos(e)},{passive:true});cv.addEventListener('touchstart',pos,{passive:true});
+function draw(){x.clearRect(0,0,W,H);x.font='30px serif';x.textAlign='center';
+ its.forEach(i=>x.fillText(i.e,i.x,i.y));x.font='44px serif';x.fillText('🧺',px,H-14)}
+function loop(){if(!run)return;t++;
+ if(t%34===0)its.push({x:20+Math.random()*(W-40),y:-10,v:2+Math.random()*1.6+sc*.05,e:Math.random()<.2?'💗':'🌸'});
+ its.forEach(i=>i.y+=i.v);
+ its=its.filter(i=>{if(i.y>H-48&&i.y<H&&Math.abs(i.x-px)<38){sc+=i.e==='💗'?2:1;$('sc').textContent=sc;
+   if(sc>=15&&!done){done=1;$('gm').textContent='Wah, 15 poin! Kamu jago banget 🎉'}return false}return i.y<H+20});
+ draw();raf=requestAnimationFrame(loop)}
+let done=0;
+$('go').onclick=()=>{cancelAnimationFrame(raf);run=true;sc=0;t=0;its=[];done=0;$('sc').textContent=0;$('gm').textContent='Tangkap bunga dan hati yang jatuh!';$('go').textContent='Ulangi';loop()};
+draw();
+new IntersectionObserver(e=>{if(!e[0].isIntersecting)run=false;},{threshold:0}).observe(cv);
+})();
+
+// memory
+(function(){const E=['🌸','🍰','🧸','🌈','🦋','🍓'];let a=null,lock=false,mv=0,ok=0;
+function init(){const g=$('mem');g.innerHTML='';mv=0;ok=0;a=null;$('mv').textContent=0;$('mm').textContent='';
+ [...E,...E].sort(()=>Math.random()-.5).forEach(e=>{const b=document.createElement('button');b.className='mc';b.textContent=e;b.setAttribute('aria-label','Kartu tertutup');
+  b.onclick=()=>{if(lock||b.classList.contains('up')||b.classList.contains('ok'))return;b.classList.add('up');
+   if(!a){a=b;return}mv++;$('mv').textContent=mv;
+   if(a.textContent===b.textContent){a.classList.replace('up','ok');b.classList.replace('up','ok');a=null;
+    if(++ok===E.length)$('mm').textContent='Semua pasangan ketemu dalam '+mv+' langkah! 🥳'}
+   else{lock=true;const p=a;a=null;setTimeout(()=>{p.classList.remove('up');b.classList.remove('up');lock=false},700)}};
+  g.appendChild(b)})}
+$('rs').onclick=init;init()})();
+</script>
+</body>
+</html>
